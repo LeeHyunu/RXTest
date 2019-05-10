@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.shownCities = self.allCities.filter({$0.hasPrefix(query)})
                 self.tableView.reloadData()
             })
-        .dispose()
+        .disposed(by: disposeBag)
     }
 
 
